@@ -30,6 +30,11 @@
 		DCA665B524521A94006151AE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B424521A94006151AE /* Localized.swift */; };
 		DCA665BA24521EE7006151AE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */; };
 		DCA665BB24521EE7006151AE /* MainViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */; };
+		DCA665BD24522877006151AE /* MoyaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BC24522877006151AE /* MoyaExtensions.swift */; };
+		DCA665C0245228D3006151AE /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BF245228D3006151AE /* ApiError.swift */; };
+		DCA665C224522948006151AE /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C124522948006151AE /* BaseTargetType.swift */; };
+		DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C3245229D7006151AE /* GeneralAPIService.swift */; };
+		DCA665C624523278006151AE /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C524523278006151AE /* APIWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		DCA665B424521A94006151AE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewTableViewCell.xib; sourceTree = "<group>"; };
+		DCA665BC24522877006151AE /* MoyaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaExtensions.swift; sourceTree = "<group>"; };
+		DCA665BF245228D3006151AE /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		DCA665C124522948006151AE /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		DCA665C3245229D7006151AE /* GeneralAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPIService.swift; sourceTree = "<group>"; };
+		DCA665C524523278006151AE /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
 		E54245C38531F967025F212E /* Pods_WykopApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WykopApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.debug.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +180,7 @@
 				DCA665A1245218DB006151AE /* UIFontExtension.swift */,
 				DCA665A2245218DB006151AE /* UITableViewExtension.swift */,
 				DCA665A3245218DB006151AE /* UIViewExtensionsNib.swift */,
+				DCA665BC24522877006151AE /* MoyaExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 		DCA6658F245216E0006151AE /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				DCA665C524523278006151AE /* APIWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -200,6 +212,9 @@
 		DCA66591245216FD006151AE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DCA665C124522948006151AE /* BaseTargetType.swift */,
+				DCA665C3245229D7006151AE /* GeneralAPIService.swift */,
+				DCA665BE245228C0006151AE /* ApiError */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -241,6 +256,14 @@
 				DCA665AF24521A4C006151AE /* MainViewModel.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		DCA665BE245228C0006151AE /* ApiError */ = {
+			isa = PBXGroup;
+			children = (
+				DCA665BF245228D3006151AE /* ApiError.swift */,
+			);
+			path = ApiError;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,14 +389,19 @@
 				DCA665B524521A94006151AE /* Localized.swift in Sources */,
 				DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */,
 				DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */,
+				DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */,
 				DCA6659624521854006151AE /* CommonViewController.swift in Sources */,
+				DCA665C624523278006151AE /* APIWorker.swift in Sources */,
+				DCA665BD24522877006151AE /* MoyaExtensions.swift in Sources */,
 				DCA665B324521A4C006151AE /* MainViewController.swift in Sources */,
 				DCA6659424521841006151AE /* MainNavigationController.swift in Sources */,
 				DCA66576245215B3006151AE /* AppDelegate.swift in Sources */,
 				DCA665BA24521EE7006151AE /* MainViewTableViewCell.swift in Sources */,
+				DCA665C0245228D3006151AE /* ApiError.swift in Sources */,
 				DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */,
 				DCA6659A24521886006151AE /* MainCoordinator.swift in Sources */,
 				DCA665AA245218DB006151AE /* UIViewExtensionsNib.swift in Sources */,
+				DCA665C224522948006151AE /* BaseTargetType.swift in Sources */,
 				DCA665982452186C006151AE /* ApplicationCoordinator.swift in Sources */,
 				DCA665A5245218DB006151AE /* BundleExtension.swift in Sources */,
 				DCA665A8245218DB006151AE /* UIFontExtension.swift in Sources */,

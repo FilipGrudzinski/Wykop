@@ -25,7 +25,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="toh-fB-8sS">
-                    <rect key="frame" x="141.5" y="56" width="131" height="32"/>
+                    <rect key="frame" x="16" y="56" width="382" height="32"/>
                     <segments>
                         <segment title="First"/>
                         <segment title="Second"/>
@@ -40,9 +40,11 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WCM-3D-IlG" secondAttribute="trailing" id="8Ze-GV-r7l"/>
                 <constraint firstItem="toh-fB-8sS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="8b4-5P-vCj"/>
                 <constraint firstAttribute="bottom" secondItem="WCM-3D-IlG" secondAttribute="bottom" id="RoX-lj-aPV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="toh-fB-8sS" secondAttribute="trailing" constant="16" id="ViX-4t-iXj"/>
                 <constraint firstItem="toh-fB-8sS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WDU-uT-9I4"/>
                 <constraint firstItem="WCM-3D-IlG" firstAttribute="top" secondItem="toh-fB-8sS" secondAttribute="bottom" constant="12" id="bFV-16-V6X"/>
                 <constraint firstItem="WCM-3D-IlG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ntD-ME-YRy"/>
+                <constraint firstItem="toh-fB-8sS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="sQc-iN-nnr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="132" y="154"/>

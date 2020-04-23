@@ -12,4 +12,5 @@ enum Localized {
     static let mainViewTitle = "WykopApi App"
     static let mainViewFirstSegmentText = "Strona główna"
     static let mainViewSecondSegmentText = "Mikroblog"
+    static let invalidAPIKeyError = "Niepoprawny token"
 }

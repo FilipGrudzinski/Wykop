@@ -29,22 +29,36 @@ final class MainViewModel {
     weak var delegate: MainViewModelDelegate!
     
     private let coordinator: MainCoordinatorProtocol
+    private let worker: APIWorkerProtocol
     
-    private var segmentDataSource: [String] = []
-    private let itemDataSource = [Localized.mainViewFirstSegmentText, Localized.mainViewSecondSegmentText]
+    private var itemDataSource: [String] = []
+    private let segmentDataSource = [Localized.mainViewFirstSegmentText, Localized.mainViewSecondSegmentText]
     
-    init(_ coordinator: MainCoordinatorProtocol) {
+    init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
+        self.worker = worker
         self.coordinator = coordinator
+    }
+    
+    private func fetchMainData(_ page: Int) {
+        worker.fetchPromotedList(page)
+            .done { response in
+                print(response)
+        }
+        .catch { error in
+            print(error)
+        }
     }
 }
 
 extension MainViewModel: MainViewModelProtocol {
     var title: String { Localized.mainViewTitle }
     var dataSourceCount: Int { itemDataSource.count }
-
+    
     func onViewDidLoad() {
         delegate.setSegmentControlData(data: segmentDataSource)
         delegate.setSegment(.zero)
+        fetchMainData(.zero)
+        delegate.reloadData()
     }
     
     func didTapSegment(_ index: Int) {

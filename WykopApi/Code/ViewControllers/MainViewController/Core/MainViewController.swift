@@ -32,7 +32,7 @@ final class MainViewController: CommonViewController {
     }
     
     @IBAction func segementControlAction(_ sender: Any) {
-        //activityIndicator.show()
+        activityIndicator.show()
         viewModel.didTapSegment(segmentControl.selectedSegmentIndex)
     }
     
@@ -40,7 +40,7 @@ final class MainViewController: CommonViewController {
         view.backgroundColor = .white
         title = viewModel.title
         setupTableView()
-        //activityIndicator.show()
+        activityIndicator.show()
     }
     
     private func setupTableView() {
