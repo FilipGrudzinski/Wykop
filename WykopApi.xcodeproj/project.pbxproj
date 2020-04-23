@@ -3,27 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A1D41C03BC8E374881268D /* Pods_WykopApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54245C38531F967025F212E /* Pods_WykopApi.framework */; };
 		DCA66576245215B3006151AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66575245215B3006151AE /* AppDelegate.swift */; };
-		DCA66578245215B3006151AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66577245215B3006151AE /* SceneDelegate.swift */; };
-		DCA6657A245215B3006151AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66579245215B3006151AE /* ViewController.swift */; };
-		DCA6657D245215B3006151AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA6657B245215B3006151AE /* Main.storyboard */; };
 		DCA6657F245215B4006151AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA6657E245215B4006151AE /* Assets.xcassets */; };
 		DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA66580245215B4006151AE /* LaunchScreen.storyboard */; };
+		DCA6659424521841006151AE /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659324521841006151AE /* MainNavigationController.swift */; };
+		DCA6659624521854006151AE /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659524521854006151AE /* CommonViewController.swift */; };
+		DCA665982452186C006151AE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665972452186C006151AE /* ApplicationCoordinator.swift */; };
+		DCA6659A24521886006151AE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659924521886006151AE /* MainCoordinator.swift */; };
+		DCA6659C245218B4006151AE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659B245218B4006151AE /* StringExtensions.swift */; };
+		DCA665A4245218DB006151AE /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659D245218DA006151AE /* CollectionExtension.swift */; };
+		DCA665A5245218DB006151AE /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659E245218DA006151AE /* BundleExtension.swift */; };
+		DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6659F245218DA006151AE /* UIColorExtension.swift */; };
+		DCA665A7245218DB006151AE /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665A0245218DA006151AE /* ReusableView.swift */; };
+		DCA665A8245218DB006151AE /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665A1245218DB006151AE /* UIFontExtension.swift */; };
+		DCA665A9245218DB006151AE /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665A2245218DB006151AE /* UITableViewExtension.swift */; };
+		DCA665AA245218DB006151AE /* UIViewExtensionsNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665A3245218DB006151AE /* UIViewExtensionsNib.swift */; };
+		DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665AC245219B6006151AE /* ActivityIndicator.swift */; };
+		DCA665B124521A4C006151AE /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA665AE24521A4C006151AE /* MainViewController.xib */; };
+		DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665AF24521A4C006151AE /* MainViewModel.swift */; };
+		DCA665B324521A4C006151AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B024521A4C006151AE /* MainViewController.swift */; };
+		DCA665B524521A94006151AE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B424521A94006151AE /* Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24D3A5626A905AD7FBC42885 /* Pods-WykopApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.release.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.release.xcconfig"; sourceTree = "<group>"; };
 		DCA66572245215B3006151AE /* WykopApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WykopApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA66575245215B3006151AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCA66577245215B3006151AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DCA66579245215B3006151AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCA6657C245215B3006151AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCA6657E245215B4006151AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA66581245215B4006151AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCA66583245215B4006151AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA6659324521841006151AE /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		DCA6659524521854006151AE /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		DCA665972452186C006151AE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		DCA6659924521886006151AE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		DCA6659B245218B4006151AE /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		DCA6659D245218DA006151AE /* CollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		DCA6659E245218DA006151AE /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		DCA6659F245218DA006151AE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DCA665A0245218DA006151AE /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		DCA665A1245218DB006151AE /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		DCA665A2245218DB006151AE /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		DCA665A3245218DB006151AE /* UIViewExtensionsNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsNib.swift; sourceTree = "<group>"; };
+		DCA665AC245219B6006151AE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		DCA665AE24521A4C006151AE /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		DCA665AF24521A4C006151AE /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DCA665B024521A4C006151AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DCA665B424521A94006151AE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		E54245C38531F967025F212E /* Pods_WykopApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WykopApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.debug.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A1D41C03BC8E374881268D /* Pods_WykopApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C904D64FCFCDF3430D6FABA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E54245C38531F967025F212E /* Pods_WykopApi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB3128876476BE8D61DA970B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */,
+				24D3A5626A905AD7FBC42885 /* Pods-WykopApi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DCA66569245215B3006151AE = {
 			isa = PBXGroup;
 			children = (
 				DCA66574245215B3006151AE /* WykopApi */,
 				DCA66573245215B3006151AE /* Products */,
+				CB3128876476BE8D61DA970B /* Pods */,
+				7C904D64FCFCDF3430D6FABA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +108,117 @@
 		DCA66574245215B3006151AE /* WykopApi */ = {
 			isa = PBXGroup;
 			children = (
+				DCA665892452169E006151AE /* Code */,
+				DCA6659224521708006151AE /* Resources */,
+			);
+			path = WykopApi;
+			sourceTree = "<group>";
+		};
+		DCA665892452169E006151AE /* Code */ = {
+			isa = PBXGroup;
+			children = (
 				DCA66575245215B3006151AE /* AppDelegate.swift */,
-				DCA66577245215B3006151AE /* SceneDelegate.swift */,
-				DCA66579245215B3006151AE /* ViewController.swift */,
-				DCA6657B245215B3006151AE /* Main.storyboard */,
+				DCA6658A245216AC006151AE /* Common */,
+				DCA6658B245216B6006151AE /* Coordinators */,
+				DCA6658D245216C7006151AE /* Extensions */,
+				DCA6658C245216C1006151AE /* Helpers */,
+				DCA6658E245216D5006151AE /* Components */,
+				DCA6658F245216E0006151AE /* Workers */,
+				DCA66590245216EF006151AE /* ViewControllers */,
+				DCA66591245216FD006151AE /* Networking */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		DCA6658A245216AC006151AE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DCA6659324521841006151AE /* MainNavigationController.swift */,
+				DCA6659524521854006151AE /* CommonViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DCA6658B245216B6006151AE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DCA665972452186C006151AE /* ApplicationCoordinator.swift */,
+				DCA6659924521886006151AE /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DCA6658C245216C1006151AE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DCA6658D245216C7006151AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DCA6659B245218B4006151AE /* StringExtensions.swift */,
+				DCA6659E245218DA006151AE /* BundleExtension.swift */,
+				DCA6659D245218DA006151AE /* CollectionExtension.swift */,
+				DCA665A0245218DA006151AE /* ReusableView.swift */,
+				DCA6659F245218DA006151AE /* UIColorExtension.swift */,
+				DCA665A1245218DB006151AE /* UIFontExtension.swift */,
+				DCA665A2245218DB006151AE /* UITableViewExtension.swift */,
+				DCA665A3245218DB006151AE /* UIViewExtensionsNib.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DCA6658E245216D5006151AE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DCA665AC245219B6006151AE /* ActivityIndicator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DCA6658F245216E0006151AE /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		DCA66590245216EF006151AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCA665AB24521938006151AE /* MainViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DCA66591245216FD006151AE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DCA6659224521708006151AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				DCA6657E245215B4006151AE /* Assets.xcassets */,
 				DCA66580245215B4006151AE /* LaunchScreen.storyboard */,
 				DCA66583245215B4006151AE /* Info.plist */,
+				DCA665B424521A94006151AE /* Localized.swift */,
 			);
-			path = WykopApi;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DCA665AB24521938006151AE /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DCA665B024521A4C006151AE /* MainViewController.swift */,
+				DCA665AE24521A4C006151AE /* MainViewController.xib */,
+				DCA665AF24521A4C006151AE /* MainViewModel.swift */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCA66586245215B4006151AE /* Build configuration list for PBXNativeTarget "WykopApi" */;
 			buildPhases = (
+				0D361CD48A6991033AEAA05B /* [CP] Check Pods Manifest.lock */,
 				DCA6656E245215B3006151AE /* Sources */,
 				DCA6656F245215B3006151AE /* Frameworks */,
 				DCA66570245215B3006151AE /* Resources */,
+				F82215FB5F5010E61E58B1E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,35 +282,83 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */,
+				DCA665B124521A4C006151AE /* MainViewController.xib in Resources */,
 				DCA6657F245215B4006151AE /* Assets.xcassets in Resources */,
-				DCA6657D245215B3006151AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D361CD48A6991033AEAA05B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WykopApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F82215FB5F5010E61E58B1E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WykopApi/Pods-WykopApi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WykopApi/Pods-WykopApi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WykopApi/Pods-WykopApi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCA6656E245215B3006151AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA6657A245215B3006151AE /* ViewController.swift in Sources */,
+				DCA6659C245218B4006151AE /* StringExtensions.swift in Sources */,
+				DCA665A7245218DB006151AE /* ReusableView.swift in Sources */,
+				DCA665A4245218DB006151AE /* CollectionExtension.swift in Sources */,
+				DCA665A9245218DB006151AE /* UITableViewExtension.swift in Sources */,
+				DCA665B524521A94006151AE /* Localized.swift in Sources */,
+				DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */,
+				DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */,
+				DCA6659624521854006151AE /* CommonViewController.swift in Sources */,
+				DCA665B324521A4C006151AE /* MainViewController.swift in Sources */,
+				DCA6659424521841006151AE /* MainNavigationController.swift in Sources */,
 				DCA66576245215B3006151AE /* AppDelegate.swift in Sources */,
-				DCA66578245215B3006151AE /* SceneDelegate.swift in Sources */,
+				DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */,
+				DCA6659A24521886006151AE /* MainCoordinator.swift in Sources */,
+				DCA665AA245218DB006151AE /* UIViewExtensionsNib.swift in Sources */,
+				DCA665982452186C006151AE /* ApplicationCoordinator.swift in Sources */,
+				DCA665A5245218DB006151AE /* BundleExtension.swift in Sources */,
+				DCA665A8245218DB006151AE /* UIFontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DCA6657B245215B3006151AE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCA6657C245215B3006151AE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DCA66580245215B4006151AE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,35 +486,43 @@
 		};
 		DCA66587245215B4006151AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WykopApi/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/WykopApi/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Filip.WykopApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DCA66588245215B4006151AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D3A5626A905AD7FBC42885 /* Pods-WykopApi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WykopApi/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/WykopApi/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Filip.WykopApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
