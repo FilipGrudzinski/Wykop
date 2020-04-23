@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="WykopApi" customModuleProvider="target">
             <connections>
+                <outlet property="segmentControl" destination="toh-fB-8sS" id="jfJ-0A-PXS"/>
+                <outlet property="tableView" destination="WCM-3D-IlG" id="8wS-Kq-LTP"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nWu-gu-5Xl"/>
             </connections>
         </placeholder>
@@ -28,6 +30,9 @@
                         <segment title="First"/>
                         <segment title="Second"/>
                     </segments>
+                    <connections>
+                        <action selector="segementControlAction:" destination="-1" eventType="valueChanged" id="r4S-P1-pfk"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

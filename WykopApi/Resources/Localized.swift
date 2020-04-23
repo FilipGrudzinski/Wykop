@@ -9,5 +9,7 @@
 import Foundation
 
 enum Localized {
-    static let mainViewTitle = ""
+    static let mainViewTitle = "WykopApi App"
+    static let mainViewFirstSegmentText = "Strona główna"
+    static let mainViewSecondSegmentText = "Mikroblog"
 }

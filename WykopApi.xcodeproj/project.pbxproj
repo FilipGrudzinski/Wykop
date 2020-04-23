@@ -28,6 +28,8 @@
 		DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665AF24521A4C006151AE /* MainViewModel.swift */; };
 		DCA665B324521A4C006151AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B024521A4C006151AE /* MainViewController.swift */; };
 		DCA665B524521A94006151AE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B424521A94006151AE /* Localized.swift */; };
+		DCA665BA24521EE7006151AE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */; };
+		DCA665BB24521EE7006151AE /* MainViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		DCA665AF24521A4C006151AE /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		DCA665B024521A4C006151AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DCA665B424521A94006151AE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
+		DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewTableViewCell.xib; sourceTree = "<group>"; };
 		E54245C38531F967025F212E /* Pods_WykopApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WykopApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.debug.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,11 +218,29 @@
 		DCA665AB24521938006151AE /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DCA665B724521ED8006151AE /* Core */,
+				DCA665B624521ED0006151AE /* View */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		DCA665B624521ED0006151AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */,
+				DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCA665B724521ED8006151AE /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				DCA665B024521A4C006151AE /* MainViewController.swift */,
 				DCA665AE24521A4C006151AE /* MainViewController.xib */,
 				DCA665AF24521A4C006151AE /* MainViewModel.swift */,
 			);
-			path = MainViewController;
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */,
+				DCA665BB24521EE7006151AE /* MainViewTableViewCell.xib in Resources */,
 				DCA665B124521A4C006151AE /* MainViewController.xib in Resources */,
 				DCA6657F245215B4006151AE /* Assets.xcassets in Resources */,
 			);
@@ -347,6 +370,7 @@
 				DCA665B324521A4C006151AE /* MainViewController.swift in Sources */,
 				DCA6659424521841006151AE /* MainNavigationController.swift in Sources */,
 				DCA66576245215B3006151AE /* AppDelegate.swift in Sources */,
+				DCA665BA24521EE7006151AE /* MainViewTableViewCell.swift in Sources */,
 				DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */,
 				DCA6659A24521886006151AE /* MainCoordinator.swift in Sources */,
 				DCA665AA245218DB006151AE /* UIViewExtensionsNib.swift in Sources */,
