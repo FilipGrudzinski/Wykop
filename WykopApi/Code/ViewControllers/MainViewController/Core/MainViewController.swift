@@ -1,5 +1,5 @@
 //
-//  ActivityIndicator.swift
+//  MainViewController.swift
 //  WykopApi
 //
 //  Created by Filip Grudziński on 23/04/2020.
@@ -72,8 +72,11 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: MainViewModelDelegate {
+    func activityIndicatorState(_ state: Bool) {
+        state ? activityIndicator.show() : activityIndicator.hide()
+    }
+    
     func reloadData() {
-        activityIndicator.hide()
         tableView.reloadData()
     }
     

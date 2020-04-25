@@ -1,5 +1,5 @@
 //
-//  ActivityIndicator.swift
+//  MainViewTableViewCell.swift
 //  WykopApi
 //
 //  Created by Filip Grudziński on 23/04/2020.

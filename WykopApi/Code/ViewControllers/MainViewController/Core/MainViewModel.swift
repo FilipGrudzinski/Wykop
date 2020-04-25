@@ -1,5 +1,5 @@
 //
-//  ActivityIndicator.swift
+//  MainViewController.swift
 //  WykopApi
 //
 //  Created by Filip Grudziński on 23/04/2020.
@@ -20,6 +20,7 @@ protocol MainViewModelProtocol: class {
 }
 
 protocol MainViewModelDelegate: class {
+    func activityIndicatorState(_ state: Bool)
     func setSegment(_ index: Int)
     func reloadData()
     func setSegmentControlData(data: [String])
@@ -47,6 +48,7 @@ final class MainViewModel {
     private func fetchPromotedData(_ page: Int) {
         worker.fetchPromotedList(page)
             .done { response in
+                self.delegate.activityIndicatorState(false)
                 print(response.pagination)
         }
         .catch { error in
@@ -57,6 +59,7 @@ final class MainViewModel {
     private func fetchStreamList(_ page: Int) {
         worker.fetchStreamList(page)
             .done { response in
+                self.delegate.activityIndicatorState(false)
                 print(response)
         }
         .catch { error in
@@ -81,7 +84,8 @@ extension MainViewModel: MainViewModelProtocol {
         case .main:
             fetchPromotedData(.zero)
         case .blog:
-            fetchStreamList(.zero)
+            coordinator.showDetailsView("dsd")
+            //fetchStreamList(.zero)
         }
     }
     

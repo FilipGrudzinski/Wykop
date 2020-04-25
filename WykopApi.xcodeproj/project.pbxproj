@@ -39,6 +39,10 @@
 		DCEC1B82245471C100C1C5AC /* StreamListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B81245471C100C1C5AC /* StreamListResponseModel.swift */; };
 		DCEC1B842454772100C1C5AC /* CommonPaginationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B832454772100C1C5AC /* CommonPaginationResponseModel.swift */; };
 		DCEC1B862454774000C1C5AC /* CommonAuthorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B852454774000C1C5AC /* CommonAuthorResponseModel.swift */; };
+		DCEC1B9224547AA100C1C5AC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B8F24547AA100C1C5AC /* DetailsViewController.swift */; };
+		DCEC1B9324547AA100C1C5AC /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEC1B9024547AA100C1C5AC /* DetailsViewController.xib */; };
+		DCEC1B9424547AA100C1C5AC /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9124547AA100C1C5AC /* DetailsViewModel.swift */; };
+		DCEC1B9624547DA100C1C5AC /* CommonModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9524547DA100C1C5AC /* CommonModalNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		DCEC1B81245471C100C1C5AC /* StreamListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamListResponseModel.swift; sourceTree = "<group>"; };
 		DCEC1B832454772100C1C5AC /* CommonPaginationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPaginationResponseModel.swift; sourceTree = "<group>"; };
 		DCEC1B852454774000C1C5AC /* CommonAuthorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAuthorResponseModel.swift; sourceTree = "<group>"; };
+		DCEC1B8F24547AA100C1C5AC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DCEC1B9024547AA100C1C5AC /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		DCEC1B9124547AA100C1C5AC /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		DCEC1B9524547DA100C1C5AC /* CommonModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModalNavigationController.swift; sourceTree = "<group>"; };
 		E54245C38531F967025F212E /* Pods_WykopApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WykopApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.debug.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +165,7 @@
 			children = (
 				DCA6659324521841006151AE /* MainNavigationController.swift */,
 				DCA6659524521854006151AE /* CommonViewController.swift */,
+				DCEC1B9524547DA100C1C5AC /* CommonModalNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 		DCA66590245216EF006151AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DCEC1B8E24547A5600C1C5AC /* DetailsViewController */,
 				DCA665AB24521938006151AE /* MainViewController */,
 			);
 			path = ViewControllers;
@@ -286,6 +296,16 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		DCEC1B8E24547A5600C1C5AC /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DCEC1B8F24547AA100C1C5AC /* DetailsViewController.swift */,
+				DCEC1B9024547AA100C1C5AC /* DetailsViewController.xib */,
+				DCEC1B9124547AA100C1C5AC /* DetailsViewModel.swift */,
+			);
+			path = DetailsViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +368,7 @@
 			files = (
 				DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */,
 				DCA665BB24521EE7006151AE /* MainViewTableViewCell.xib in Resources */,
+				DCEC1B9324547AA100C1C5AC /* DetailsViewController.xib in Resources */,
 				DCA665B124521A4C006151AE /* MainViewController.xib in Resources */,
 				DCA6657F245215B4006151AE /* Assets.xcassets in Resources */,
 			);
@@ -409,11 +430,14 @@
 				DCA665A9245218DB006151AE /* UITableViewExtension.swift in Sources */,
 				DCEC1B82245471C100C1C5AC /* StreamListResponseModel.swift in Sources */,
 				DCA665B524521A94006151AE /* Localized.swift in Sources */,
+				DCEC1B9424547AA100C1C5AC /* DetailsViewModel.swift in Sources */,
 				DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */,
 				DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */,
 				DCEC1B842454772100C1C5AC /* CommonPaginationResponseModel.swift in Sources */,
 				DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */,
+				DCEC1B9224547AA100C1C5AC /* DetailsViewController.swift in Sources */,
 				DCA6659624521854006151AE /* CommonViewController.swift in Sources */,
+				DCEC1B9624547DA100C1C5AC /* CommonModalNavigationController.swift in Sources */,
 				DCA665C624523278006151AE /* APIWorker.swift in Sources */,
 				DCA665BD24522877006151AE /* MoyaExtensions.swift in Sources */,
 				DCA665B324521A4C006151AE /* MainViewController.swift in Sources */,
