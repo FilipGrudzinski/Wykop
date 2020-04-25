@@ -17,7 +17,6 @@ final class DetailsViewController: CommonViewController {
     init(with viewModel: DetailsViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -27,19 +26,25 @@ final class DetailsViewController: CommonViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewHandlers()
         setupView()
         viewModel.onViewDidLoad()
+    }
+    
+    private func setupViewHandlers() {
+        viewModel.activityIndicatorUpdateHandler = { [weak self] state in
+            state ? self?.activityIndicator.show() : self?.activityIndicator.hide()
+        }
+        
+        viewModel.urlUpdateHandler = { [weak self] url in
+            let request = URLRequest(url: url)
+            self?.webView.load(request)
+        }
     }
     
     private func setupView() {
         view.backgroundColor = .white
         title = viewModel.title
         activityIndicator.show()
-    }
-}
-
-extension DetailsViewController: DetailsViewModelDelegate {
-    func activityIndicatorState(_ state: Bool) {
-        state ? activityIndicator.show() : activityIndicator.hide()
     }
 }

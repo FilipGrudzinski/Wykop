@@ -9,8 +9,10 @@
 import Foundation
 
 protocol DetailsViewModelProtocol: class {
-    var delegate: DetailsViewModelDelegate! { get set }
     var title: String { get }
+    
+    var activityIndicatorUpdateHandler: ((Bool) -> ())? { get set }
+    var urlUpdateHandler: ((URL) -> ())? { get set }
     
     func onViewDidLoad()
 }
@@ -20,11 +22,12 @@ protocol DetailsViewModelDelegate: class {
 }
 
 final class DetailsViewModel {
-    weak var delegate: DetailsViewModelDelegate!
-    
     private let coordinator: MainCoordinatorProtocol
     
     private let urlString: String
+    
+    var activityIndicatorUpdateHandler: ((Bool) -> ())?
+    var urlUpdateHandler: ((URL) -> ())?
     
     init(_ coordinator: MainCoordinatorProtocol, urlString: String) {
         self.urlString = urlString
@@ -34,7 +37,14 @@ final class DetailsViewModel {
 
 extension DetailsViewModel: DetailsViewModelProtocol {
     var title: String { Localized.detailsViewTitle }
-
+    
     func onViewDidLoad() {
+        activityIndicatorUpdateHandler?(false)
+        
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        urlUpdateHandler?(url)
     }
 }

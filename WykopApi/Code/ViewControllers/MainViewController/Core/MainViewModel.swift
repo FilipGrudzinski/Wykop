@@ -84,7 +84,7 @@ extension MainViewModel: MainViewModelProtocol {
         case .main:
             fetchPromotedData(.zero)
         case .blog:
-            coordinator.showDetailsView("dsd")
+            coordinator.showDetailsView("http://www.onet.pl")
             //fetchStreamList(.zero)
         }
     }
