@@ -14,10 +14,12 @@ enum GeneralAPIService {
 }
 
 extension GeneralAPIService: TargetType {
+    private static let appKey = "appkey/gnr9daRtLW"
+            
     var path: String {
         switch self {
         case let .promotedList(request):
-            return "Links/Promoted/page/\(request)/appkey/gnr9daRtLW"
+            return "Links/Promoted/page/\(request)/\(GeneralAPIService.appKey))"
         }
     }
         

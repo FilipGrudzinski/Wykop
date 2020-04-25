@@ -10,6 +10,7 @@ import Foundation
 import Moya
 
 extension TargetType {
+    
     var baseURL: URL {
         return URL(string: "https://a2.wykop.pl/")!
     }

@@ -11,14 +11,14 @@ import SwiftyJSON
 import PromiseKit
 
 extension MoyaProvider where Target: TargetType {
-    func request(_ target: Target) -> Promise<JSON> {
+    func request<U: Decodable>(_ target: Target, type: U.Type) -> Promise<U> {
         return Promise { resolver in
             request(target) { result in
                 switch result {
                 case let .success(response):
                     do {
-                        let json = try JSON(data: response.data)
-                        resolver.fulfill(json)
+                        let model: U = try JSONDecoder().decode(U.self, from: response.data)
+                        resolver.fulfill(model)
                     } catch {
                         let apiError: APIError = MoyaProvider.errorHandler(response.statusCode)
                         resolver.reject(apiError)

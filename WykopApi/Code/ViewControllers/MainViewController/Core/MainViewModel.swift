@@ -42,7 +42,7 @@ final class MainViewModel {
     private func fetchMainData(_ page: Int) {
         worker.fetchPromotedList(page)
             .done { response in
-                print(response)
+                print(response.pagination)
         }
         .catch { error in
             print(error)

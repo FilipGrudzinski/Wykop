@@ -12,13 +12,13 @@ import PromiseKit
 import SwiftyJSON
 
 protocol APIWorkerProtocol {
-    func fetchPromotedList(_ pageNumber: Int) -> Promise<JSON>
+    func fetchPromotedList(_ pageNumber: Int) -> Promise<PromotedListResponseModel>
 }
 
 final class APIWorker: APIWorkerProtocol {
     let provider = MoyaProvider<GeneralAPIService>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
-    func fetchPromotedList(_ pageNumber: Int) -> Promise<JSON> {
-        return provider.request(.promotedList(pageNumber))
+    func fetchPromotedList(_ pageNumber: Int) -> Promise<PromotedListResponseModel> {
+        return provider.request(.promotedList(pageNumber), type: PromotedListResponseModel.self)
     }
 }
