@@ -14,4 +14,5 @@ enum Localized {
     static let mainViewFirstSegmentText = "Strona główna"
     static let mainViewSecondSegmentText = "Mikroblog"
     static let invalidAPIKeyError = "Niepoprawny token"
+    static let commonCellAuthorLabelText = "Autor"
 }

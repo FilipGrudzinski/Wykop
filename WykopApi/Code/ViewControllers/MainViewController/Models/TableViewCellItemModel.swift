@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct MainTableViewCellItemModel {
+struct TableViewCellItemModel {
+    let style: CommonCellStyle
     let title: String
     let url: String
+    var author: String? = .empty
+    var imageUrl: URL?
 }

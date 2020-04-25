@@ -36,11 +36,13 @@ struct StreamListResponseModel: Decodable {
             case userVote = "user_vote"
             case app = "app"
             case violationUrl = "violation_url"
+            case original = "original"
+            case url = "url"
         }
         
-        let id: Int?
+        let id: Int
         let date: String?
-        let body: String?
+        var body: String
         let author: CommonAuthorResponseModel?
         let receiver: StreamListCompactReceiverResponseModel?
         let blocked: Bool?
@@ -52,9 +54,11 @@ struct StreamListResponseModel: Decodable {
         let embed: StreamListEmbedResponseModel?
         let survey: StreamListSurveyResponseModel?
         let canComment: Bool?
-        let userVote: Int
+        let userVote: Int?
         let app: String?
         let violationUrl: String?
+        let original: String?
+        let url: String
         
         struct StreamListCompactReceiverResponseModel: Decodable { }
         struct StreamListCommentsResponseModel: Decodable { }

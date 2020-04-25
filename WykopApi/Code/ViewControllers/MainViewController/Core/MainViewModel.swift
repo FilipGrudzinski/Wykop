@@ -16,7 +16,7 @@ protocol MainViewModelProtocol: class {
     func onViewDidLoad()
     func loadMoreData(_ index: Int)
     func didTapSegment(_ index: Int)
-    func item(at indexPath: IndexPath) -> MainTableViewCellItemModel
+    func item(at indexPath: IndexPath) -> TableViewCellItemModel
     func didTapCell(at indexPath: IndexPath)
 }
 
@@ -33,6 +33,15 @@ final class MainViewModel {
     private enum SegmentType: Int, CaseIterable {
         case main
         case blog
+        
+        var cellStyle: CommonCellStyle {
+            switch self {
+            case .main:
+                return .main
+            case .blog:
+                return .blog
+            }
+        }
     }
     
     private let coordinator: MainCoordinatorProtocol
@@ -41,7 +50,8 @@ final class MainViewModel {
     private let segmentDataSource = [Localized.mainViewFirstSegmentText, Localized.mainViewSecondSegmentText]
     
     private var promotedApiDataSource: [PromotedListResponseModel.PromotedListDataResponseModel] = []
-    private var promotedCellItems: [MainTableViewCellItemModel] = []
+    private var streamApiDataSource: [StreamListResponseModel.StreamListCompactResponseModel] = []
+    private var itemsDataSource: [TableViewCellItemModel] = []
     private var loadedPage = Digit.one
     private var isNextPage = true
     
@@ -55,27 +65,52 @@ final class MainViewModel {
             .done { response in
                 self.delegate.activityIndicatorState(false)
                 self.promotedApiDataSource = response.data
-                self.setupNextPageIfExist(response)
-                self.parsePromotedToShow()
+                self.setupNextPageIfExist(response.pagination)
+                self.parseDataToShow(.main)
         }
         .catch { error in
             print(error)
         }
     }
     
-    private func parsePromotedToShow() {
-        guard promotedApiDataSource.isNotEmpty else {
-            return
+    private func fetchStreamList(_ page: Int) {
+        worker.fetchStreamList(page)
+            .done { response in
+                self.delegate.activityIndicatorState(false)
+                self.streamApiDataSource = response.data
+                self.setupNextPageIfExist(response.pagination)
+                self.parseDataToShow(.blog)
         }
-        
-        promotedApiDataSource.forEach { promotedCellItems.append(MainTableViewCellItemModel(title: $0.title, url: $0.url))
+        .catch { error in
+            print(error)
         }
-        
-        delegate.reloadData()
     }
     
-    private func setupNextPageIfExist(_ data: PromotedListResponseModel ) {
-        guard data.pagination.next != nil else {
+    private func parseDataToShow(_ type: SegmentType) {
+        switch type {
+        case .main:
+            guard promotedApiDataSource.isNotEmpty else {
+                return
+            }
+            
+            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.author?.avatar))
+            }
+            
+            delegate.reloadData()
+        case .blog:
+            guard streamApiDataSource.isNotEmpty else {
+                return
+            }
+            
+            streamApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.body, url: $0.url, author: $0.author?.login, imageUrl: $0.author?.avatar))
+            }
+
+            delegate.reloadData()
+        }
+    }
+    
+    private func setupNextPageIfExist(_ data: CommonPaginationResponseModel ) {
+        guard data.next != nil else {
             isNextPage = false
             return
         }
@@ -83,21 +118,15 @@ final class MainViewModel {
         loadedPage += Digit.one
     }
     
-    private func fetchStreamList(_ page: Int) {
-        worker.fetchStreamList(page)
-            .done { response in
-                self.delegate.activityIndicatorState(false)
-                print(response)
-        }
-        .catch { error in
-            print(error)
-        }
+    private func resetPageParams() {
+        loadedPage = Digit.one
+        isNextPage = true
     }
 }
 
 extension MainViewModel: MainViewModelProtocol {
     var title: String { Localized.mainViewTitle }
-    var dataSourceCount: Int { promotedCellItems.count }
+    var dataSourceCount: Int { itemsDataSource.count }
     
     func onViewDidLoad() {
         delegate.setSegmentControlData(data: segmentDataSource)
@@ -116,20 +145,25 @@ extension MainViewModel: MainViewModelProtocol {
     }
     
     func didTapSegment(_ index: Int) {
+        itemsDataSource.removeAll()
+        delegate.reloadData()
+        
         switch SegmentType.allCases[index] {
         case .main:
+            resetPageParams()
             fetchPromotedData(Digit.one)
         case .blog:
+            resetPageParams()
             fetchStreamList(Digit.one)
         }
     }
     
-    func item(at indexPath: IndexPath) -> MainTableViewCellItemModel {
-        return promotedCellItems[indexPath.row]
+    func item(at indexPath: IndexPath) -> TableViewCellItemModel {
+        return itemsDataSource[indexPath.row]
     }
     
     func didTapCell(at indexPath: IndexPath) {
-        let itemUrl = promotedCellItems[indexPath.row].url
+        let itemUrl = itemsDataSource[indexPath.row].url
         coordinator.showDetailsView(itemUrl)
     }
 }

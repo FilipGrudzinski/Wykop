@@ -28,8 +28,8 @@
 		DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665AF24521A4C006151AE /* MainViewModel.swift */; };
 		DCA665B324521A4C006151AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B024521A4C006151AE /* MainViewController.swift */; };
 		DCA665B524521A94006151AE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B424521A94006151AE /* Localized.swift */; };
-		DCA665BA24521EE7006151AE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */; };
-		DCA665BB24521EE7006151AE /* MainViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */; };
+		DCA665BA24521EE7006151AE /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B824521EE7006151AE /* CommonTableViewCell.swift */; };
+		DCA665BB24521EE7006151AE /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA665B924521EE7006151AE /* CommonTableViewCell.xib */; };
 		DCA665BD24522877006151AE /* MoyaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BC24522877006151AE /* MoyaExtensions.swift */; };
 		DCA665C0245228D3006151AE /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BF245228D3006151AE /* ApiError.swift */; };
 		DCA665C224522948006151AE /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C124522948006151AE /* BaseTargetType.swift */; };
@@ -44,7 +44,7 @@
 		DCEC1B9424547AA100C1C5AC /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9124547AA100C1C5AC /* DetailsViewModel.swift */; };
 		DCEC1B9624547DA100C1C5AC /* CommonModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9524547DA100C1C5AC /* CommonModalNavigationController.swift */; };
 		DCEC1B9824548F6000C1C5AC /* MagicNumbersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9724548F6000C1C5AC /* MagicNumbersHelper.swift */; };
-		DCEC1B9B2454915B00C1C5AC /* MainTableViewCellItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9A2454915B00C1C5AC /* MainTableViewCellItemModel.swift */; };
+		DCEC1B9B2454915B00C1C5AC /* TableViewCellItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B9A2454915B00C1C5AC /* TableViewCellItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +71,8 @@
 		DCA665AF24521A4C006151AE /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		DCA665B024521A4C006151AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DCA665B424521A94006151AE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
-		DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
-		DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewTableViewCell.xib; sourceTree = "<group>"; };
+		DCA665B824521EE7006151AE /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		DCA665B924521EE7006151AE /* CommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
 		DCA665BC24522877006151AE /* MoyaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaExtensions.swift; sourceTree = "<group>"; };
 		DCA665BF245228D3006151AE /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		DCA665C124522948006151AE /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		DCEC1B9124547AA100C1C5AC /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		DCEC1B9524547DA100C1C5AC /* CommonModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModalNavigationController.swift; sourceTree = "<group>"; };
 		DCEC1B9724548F6000C1C5AC /* MagicNumbersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicNumbersHelper.swift; sourceTree = "<group>"; };
-		DCEC1B9A2454915B00C1C5AC /* MainTableViewCellItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCellItemModel.swift; sourceTree = "<group>"; };
+		DCEC1B9A2454915B00C1C5AC /* TableViewCellItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellItemModel.swift; sourceTree = "<group>"; };
 		E54245C38531F967025F212E /* Pods_WykopApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WykopApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.debug.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,8 +267,8 @@
 		DCA665B624521ED0006151AE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DCA665B824521EE7006151AE /* MainViewTableViewCell.swift */,
-				DCA665B924521EE7006151AE /* MainViewTableViewCell.xib */,
+				DCA665B824521EE7006151AE /* CommonTableViewCell.swift */,
+				DCA665B924521EE7006151AE /* CommonTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 		DCEC1B992454914200C1C5AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DCEC1B9A2454915B00C1C5AC /* MainTableViewCellItemModel.swift */,
+				DCEC1B9A2454915B00C1C5AC /* TableViewCellItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */,
-				DCA665BB24521EE7006151AE /* MainViewTableViewCell.xib in Resources */,
+				DCA665BB24521EE7006151AE /* CommonTableViewCell.xib in Resources */,
 				DCEC1B9324547AA100C1C5AC /* DetailsViewController.xib in Resources */,
 				DCA665B124521A4C006151AE /* MainViewController.xib in Resources */,
 				DCA6657F245215B4006151AE /* Assets.xcassets in Resources */,
@@ -443,7 +443,7 @@
 				DCA665A4245218DB006151AE /* CollectionExtension.swift in Sources */,
 				DCA665A9245218DB006151AE /* UITableViewExtension.swift in Sources */,
 				DCEC1B82245471C100C1C5AC /* StreamListResponseModel.swift in Sources */,
-				DCEC1B9B2454915B00C1C5AC /* MainTableViewCellItemModel.swift in Sources */,
+				DCEC1B9B2454915B00C1C5AC /* TableViewCellItemModel.swift in Sources */,
 				DCA665B524521A94006151AE /* Localized.swift in Sources */,
 				DCEC1B9424547AA100C1C5AC /* DetailsViewModel.swift in Sources */,
 				DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */,
@@ -458,7 +458,7 @@
 				DCA665B324521A4C006151AE /* MainViewController.swift in Sources */,
 				DCA6659424521841006151AE /* MainNavigationController.swift in Sources */,
 				DCA66576245215B3006151AE /* AppDelegate.swift in Sources */,
-				DCA665BA24521EE7006151AE /* MainViewTableViewCell.swift in Sources */,
+				DCA665BA24521EE7006151AE /* CommonTableViewCell.swift in Sources */,
 				DCA665C0245228D3006151AE /* ApiError.swift in Sources */,
 				DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */,
 				DCEC1B9824548F6000C1C5AC /* MagicNumbersHelper.swift in Sources */,

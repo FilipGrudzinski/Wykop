@@ -9,8 +9,9 @@
 import UIKit
 
 extension UIColor {
-    static let appPastel = UIColor(red: 0.96, green: 0.93, blue: 1.00, alpha: 1.0)
-    static let appPurple = UIColor(red: 0.86, green: 0.84, blue: 0.97, alpha: 1.0)
-    static let appBlue = UIColor(red: 0.96, green: 0.93, blue: 1.00, alpha: 1.0)
-    static let appCold = UIColor(red: 0.26, green: 0.28, blue: 0.45, alpha: 1.0)
+    static let appRed = UIColor(red: 0.62, green: 0.04, blue: 0.04, alpha: 1.00)
+    static let appOrange = UIColor(red: 0.92, green: 0.51, blue: 0.26, alpha: 1.00)
+    static let appYellow = UIColor(red: 0.96, green: 0.85, blue: 0.39, alpha: 1.00)
+    static let appWarm = UIColor(red: 0.85, green: 0.18, blue: 0.18, alpha: 1.00)
+    static let appBlue = UIColor(red: 0.00, green: 0.31, blue: 0.51, alpha: 1.00)
 }

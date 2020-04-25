@@ -13,7 +13,7 @@ final class DetailsViewController: CommonViewController {
     @IBOutlet private weak var webView: WKWebView!
     
     private var viewModel: DetailsViewModelProtocol
-    
+
     init(with viewModel: DetailsViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -28,6 +28,7 @@ final class DetailsViewController: CommonViewController {
         
         setupViewHandlers()
         setupView()
+        activityIndicator.show()
         viewModel.onViewDidLoad()
     }
     
@@ -45,6 +46,16 @@ final class DetailsViewController: CommonViewController {
     private func setupView() {
         view.backgroundColor = .white
         title = viewModel.title
-        activityIndicator.show()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(userDidTapShare))
+    }
+    
+    @objc private func userDidTapShare() {
+        let activityViewController = UIActivityViewController(activityItems : viewModel.urlToShare, applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceView = view
+
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.mail]
+
+        present(activityViewController, animated: true)
     }
 }

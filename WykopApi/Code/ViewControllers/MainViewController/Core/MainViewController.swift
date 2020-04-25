@@ -48,13 +48,13 @@ final class MainViewController: CommonViewController {
     }
     
     private func setupTableView() {
-        tableView.registerCellByNib(MainViewTableViewCell.self)
+        tableView.registerCellByNib(CommonTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelectionDuringEditing = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
-        tableView.rowHeight = Constants.cellHeight
+        tableView.estimatedRowHeight = Constants.cellHeight
     }
 }
 
@@ -75,8 +75,8 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MainViewTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
-        cell.setupData(viewModel.item(at: indexPath).title)
+        let cell: CommonTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
+        cell.setupData(viewModel.item(at: indexPath))
         return cell
     }
 }

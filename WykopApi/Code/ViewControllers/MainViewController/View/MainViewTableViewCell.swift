@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MainViewTableViewCell: UITableViewCell {
+final class CommonTableViewCell: UITableViewCell {
     private enum Constants {
         static let cornerRadius: CGFloat = 4.0
         static let shadowOpacity: Float = 1.0

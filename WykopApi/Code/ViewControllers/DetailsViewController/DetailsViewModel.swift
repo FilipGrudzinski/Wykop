@@ -10,6 +10,7 @@ import Foundation
 
 protocol DetailsViewModelProtocol: class {
     var title: String { get }
+    var urlToShare: [String] { get }
     
     var activityIndicatorUpdateHandler: ((Bool) -> ())? { get set }
     var urlUpdateHandler: ((URL) -> ())? { get set }
@@ -37,6 +38,7 @@ final class DetailsViewModel {
 
 extension DetailsViewModel: DetailsViewModelProtocol {
     var title: String { Localized.detailsViewTitle }
+    var urlToShare: [String] { [urlString] }
     
     func onViewDidLoad() {
         activityIndicatorUpdateHandler?(false)
