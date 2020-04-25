@@ -42,7 +42,7 @@ struct StreamListResponseModel: Decodable {
         
         let id: Int
         let date: String?
-        var body: String
+        var body: String?
         let author: CommonAuthorResponseModel?
         let receiver: StreamListCompactReceiverResponseModel?
         let blocked: Bool?

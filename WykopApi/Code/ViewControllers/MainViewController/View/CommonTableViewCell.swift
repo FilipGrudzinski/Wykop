@@ -17,7 +17,7 @@ enum CommonCellStyle {
 final class CommonTableViewCell: UITableViewCell {
     private enum Constants {
         static let cornerRadius: CGFloat = 4.0
-        static let shadowOpacity: Float = 0.7
+        static let shadowOpacity: Float = 0.1
         static let shadowRadius: CGFloat = 4.0
         static let shadowOffset = CGSize(width: 0.0, height: 0.0)
     }
@@ -49,7 +49,7 @@ final class CommonTableViewCell: UITableViewCell {
     }
     
     func setupData(_ model: TableViewCellItemModel) {
-        titleLabel.text = model.title.removeDoubleQuotes()
+        titleLabel.text = model.title
         authorValueLabel.text = model.author
         avatarImage.kf.setImage(with: model.imageUrl)
         

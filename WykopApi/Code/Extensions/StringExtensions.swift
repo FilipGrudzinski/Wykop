@@ -21,6 +21,7 @@ extension String {
     static let colon = ":"
     static let quoteSign = "\""
     static let quoteSignToRemove = "&quot;"
+    static let htmlTags = "<[^>]+>"
     static let openParenthesis = "("
     static let closeParenthesis = ")"
     static let hourMinuteFormat = "HH:mm"
@@ -34,5 +35,9 @@ extension String {
 extension String {
     func removeDoubleQuotes() -> String {
         return self.replacingOccurrences(of: String.quoteSignToRemove, with: String.quoteSign)
+    }
+    
+    func removeHtmlTags() -> String {
+        return self.replacingOccurrences(of: String.htmlTags, with: String.empty, options: .regularExpression, range: nil)
     }
 }

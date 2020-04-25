@@ -52,6 +52,7 @@ final class MainViewModel {
     private var promotedApiDataSource: [PromotedListResponseModel.PromotedListDataResponseModel] = []
     private var streamApiDataSource: [StreamListResponseModel.StreamListCompactResponseModel] = []
     private var itemsDataSource: [TableViewCellItemModel] = []
+    private var currentSegment: SegmentType = .main
     private var loadedPage = Digit.one
     private var isNextPage = true
     
@@ -69,7 +70,7 @@ final class MainViewModel {
                 self.parseDataToShow(.main)
         }
         .catch { error in
-            print(error)
+            self.errorHandler(error)
         }
     }
     
@@ -82,7 +83,7 @@ final class MainViewModel {
                 self.parseDataToShow(.blog)
         }
         .catch { error in
-            print(error)
+            self.errorHandler(error)
         }
     }
     
@@ -93,7 +94,7 @@ final class MainViewModel {
                 return
             }
             
-            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.author?.avatar))
+            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title.removeDoubleQuotes(), url: $0.url, imageUrl: $0.author?.avatar))
             }
             
             delegate.reloadData()
@@ -102,14 +103,14 @@ final class MainViewModel {
                 return
             }
             
-            streamApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.body, url: $0.url, author: $0.author?.login, imageUrl: $0.author?.avatar))
+            streamApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.body?.removeHtmlTags() ?? .empty, url: $0.url, author: $0.author?.login, imageUrl: $0.author?.avatar))
             }
-
+            
             delegate.reloadData()
         }
     }
     
-    private func setupNextPageIfExist(_ data: CommonPaginationResponseModel ) {
+    private func setupNextPageIfExist(_ data: CommonPaginationResponseModel) {
         guard data.next != nil else {
             isNextPage = false
             return
@@ -121,6 +122,10 @@ final class MainViewModel {
     private func resetPageParams() {
         loadedPage = Digit.one
         isNextPage = true
+    }
+    
+    private func errorHandler(_ error: Error) {
+        
     }
 }
 
@@ -141,19 +146,25 @@ extension MainViewModel: MainViewModelProtocol {
             return
         }
         
-        fetchPromotedData(loadedPage)
+        switch currentSegment {
+        case .main:
+            fetchPromotedData(loadedPage)
+        case .blog:
+            fetchStreamList(loadedPage)
+        }
     }
     
     func didTapSegment(_ index: Int) {
         itemsDataSource.removeAll()
-        delegate.reloadData()
         
         switch SegmentType.allCases[index] {
         case .main:
             resetPageParams()
+            currentSegment = .main
             fetchPromotedData(Digit.one)
         case .blog:
             resetPageParams()
+            currentSegment = .blog
             fetchStreamList(Digit.one)
         }
     }

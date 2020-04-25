@@ -20,6 +20,8 @@ extension MoyaProvider where Target: TargetType {
                         let model: U = try JSONDecoder().decode(U.self, from: response.data)
                         resolver.fulfill(model)
                     } catch {
+                        print(error)
+                        #warning("Add erroHandler")
                         let apiError: APIError = MoyaProvider.errorHandler(response.statusCode)
                         resolver.reject(apiError)
                     }

@@ -6,8 +6,6 @@
 //  Copyright © 2020 Filip Grudziński. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 protocol ReusableView {

@@ -12,7 +12,6 @@ import PromiseKit
 class ActivityIndicator: UIView {
     private enum Constants {
         static let bacgroundColor = UIColor.black.withAlphaComponent(0.2)
-        static let transitionDuration: TimeInterval = 2.0
         static let opaque: CGFloat = 1.0
     }
     
@@ -44,7 +43,7 @@ class ActivityIndicator: UIView {
     }
     
     func hide() {
-        UIView.animate(.promise, duration: Constants.transitionDuration) {
+        UIView.animate(.promise, duration: .zero) {
             self.alpha = .zero
         }
         .done { done in
