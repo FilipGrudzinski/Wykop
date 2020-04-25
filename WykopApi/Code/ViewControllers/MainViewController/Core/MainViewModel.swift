@@ -28,6 +28,11 @@ protocol MainViewModelDelegate: class {
 final class MainViewModel {
     weak var delegate: MainViewModelDelegate!
     
+    private enum SegmentType: Int, CaseIterable {
+        case main
+        case blog
+    }
+    
     private let coordinator: MainCoordinatorProtocol
     private let worker: APIWorkerProtocol
     
@@ -39,10 +44,20 @@ final class MainViewModel {
         self.coordinator = coordinator
     }
     
-    private func fetchMainData(_ page: Int) {
+    private func fetchPromotedData(_ page: Int) {
         worker.fetchPromotedList(page)
             .done { response in
                 print(response.pagination)
+        }
+        .catch { error in
+            print(error)
+        }
+    }
+    
+    private func fetchStreamList(_ page: Int) {
+        worker.fetchStreamList(page)
+            .done { response in
+                print(response)
         }
         .catch { error in
             print(error)
@@ -57,12 +72,17 @@ extension MainViewModel: MainViewModelProtocol {
     func onViewDidLoad() {
         delegate.setSegmentControlData(data: segmentDataSource)
         delegate.setSegment(.zero)
-        fetchMainData(.zero)
+        fetchPromotedData(.zero)
         delegate.reloadData()
     }
     
     func didTapSegment(_ index: Int) {
-        #warning("ToDo")
+        switch SegmentType.allCases[index] {
+        case .main:
+            fetchPromotedData(.zero)
+        case .blog:
+            fetchStreamList(.zero)
+        }
     }
     
     func item(at indexPath: IndexPath) -> String {

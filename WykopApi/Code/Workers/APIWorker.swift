@@ -13,6 +13,7 @@ import SwiftyJSON
 
 protocol APIWorkerProtocol {
     func fetchPromotedList(_ pageNumber: Int) -> Promise<PromotedListResponseModel>
+    func fetchStreamList(_ pageNumber: Int) -> Promise<StreamListResponseModel>
 }
 
 final class APIWorker: APIWorkerProtocol {
@@ -20,5 +21,9 @@ final class APIWorker: APIWorkerProtocol {
     
     func fetchPromotedList(_ pageNumber: Int) -> Promise<PromotedListResponseModel> {
         return provider.request(.promotedList(pageNumber), type: PromotedListResponseModel.self)
+    }
+    
+    func fetchStreamList(_ pageNumber: Int) -> Promise<StreamListResponseModel> {
+        return provider.request(.streamList(pageNumber), type: StreamListResponseModel.self)
     }
 }

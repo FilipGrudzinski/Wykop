@@ -36,6 +36,9 @@
 		DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C3245229D7006151AE /* GeneralAPIService.swift */; };
 		DCA665C624523278006151AE /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C524523278006151AE /* APIWorker.swift */; };
 		DCBAE0B32453865700ED66FE /* PromotedListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBAE0B22453865700ED66FE /* PromotedListResponseModel.swift */; };
+		DCEC1B82245471C100C1C5AC /* StreamListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B81245471C100C1C5AC /* StreamListResponseModel.swift */; };
+		DCEC1B842454772100C1C5AC /* CommonPaginationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B832454772100C1C5AC /* CommonPaginationResponseModel.swift */; };
+		DCEC1B862454774000C1C5AC /* CommonAuthorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC1B852454774000C1C5AC /* CommonAuthorResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		DCA665C3245229D7006151AE /* GeneralAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPIService.swift; sourceTree = "<group>"; };
 		DCA665C524523278006151AE /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
 		DCBAE0B22453865700ED66FE /* PromotedListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotedListResponseModel.swift; sourceTree = "<group>"; };
+		DCEC1B81245471C100C1C5AC /* StreamListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamListResponseModel.swift; sourceTree = "<group>"; };
+		DCEC1B832454772100C1C5AC /* CommonPaginationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPaginationResponseModel.swift; sourceTree = "<group>"; };
+		DCEC1B852454774000C1C5AC /* CommonAuthorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAuthorResponseModel.swift; sourceTree = "<group>"; };
 		E54245C38531F967025F212E /* Pods_WykopApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WykopApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F749C8AE1869F1C1ED2E1DF7 /* Pods-WykopApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.debug.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,6 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				DCBAE0B22453865700ED66FE /* PromotedListResponseModel.swift */,
+				DCEC1B81245471C100C1C5AC /* StreamListResponseModel.swift */,
+				DCEC1B832454772100C1C5AC /* CommonPaginationResponseModel.swift */,
+				DCEC1B852454774000C1C5AC /* CommonAuthorResponseModel.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -398,9 +407,11 @@
 				DCA665A7245218DB006151AE /* ReusableView.swift in Sources */,
 				DCA665A4245218DB006151AE /* CollectionExtension.swift in Sources */,
 				DCA665A9245218DB006151AE /* UITableViewExtension.swift in Sources */,
+				DCEC1B82245471C100C1C5AC /* StreamListResponseModel.swift in Sources */,
 				DCA665B524521A94006151AE /* Localized.swift in Sources */,
 				DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */,
 				DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */,
+				DCEC1B842454772100C1C5AC /* CommonPaginationResponseModel.swift in Sources */,
 				DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */,
 				DCA6659624521854006151AE /* CommonViewController.swift in Sources */,
 				DCA665C624523278006151AE /* APIWorker.swift in Sources */,
@@ -412,6 +423,7 @@
 				DCA665C0245228D3006151AE /* ApiError.swift in Sources */,
 				DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */,
 				DCA6659A24521886006151AE /* MainCoordinator.swift in Sources */,
+				DCEC1B862454774000C1C5AC /* CommonAuthorResponseModel.swift in Sources */,
 				DCA665AA245218DB006151AE /* UIViewExtensionsNib.swift in Sources */,
 				DCA665C224522948006151AE /* BaseTargetType.swift in Sources */,
 				DCA665982452186C006151AE /* ApplicationCoordinator.swift in Sources */,

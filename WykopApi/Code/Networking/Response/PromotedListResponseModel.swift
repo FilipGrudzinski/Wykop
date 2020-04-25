@@ -14,16 +14,8 @@ struct PromotedListResponseModel: Decodable {
         case data = "data"
     }
     
-    let pagination: PromotedListNextResponseModel
+    let pagination: CommonPaginationResponseModel
     let data: [PromotedListDataResponseModel]
-    
-    struct PromotedListNextResponseModel: Decodable {
-        enum CodingKeys: String, CodingKey {
-            case next = "next"
-        }
-        
-        let next: URL?
-    }
     
     struct PromotedListDataResponseModel: Decodable {
         enum CodingKeys: String, CodingKey {
@@ -36,7 +28,7 @@ struct PromotedListResponseModel: Decodable {
             case voteCount = "vote_count"
             case commentsCount = "comments_count"
             case relatedCount = "related_count"
-           case date = "date"
+            case date = "date"
             case author = "author"
             case preview = "preview"
             case plus18 = "plus18"
@@ -44,38 +36,38 @@ struct PromotedListResponseModel: Decodable {
             case canVote = "can_vote"
             case isHot = "is_hot"
             case app = "app"
+            case comments = "comments"
+            case userVote = "user_vote"
+            case userFavorite = "user_favorite"
+            case userObserve = "user_observe"
+            case userLists = "user_lists"
+            case isRecommended = "is_recommended"
         }
         
         let id: Int?
         let title: String?
         let description: String?
         let tags: String?
-        let sourceUrl: URL?
+        let sourceUrl: String?
         let buryCount: Int?
         let voteCount: Int?
         let commentsCount: Int?
         let relatedCount: Int?
         let date: String?
-        let author: PromotedListAuthorResponseModel?
-        let preview: URL?
+        let author: CommonAuthorResponseModel?
+        let preview: String?
         let plus18: Bool?
         let status: String?
         let canVote: Bool?
         let isHot: Bool?
         let app: String?
+        let comments: PromotedListCommentsResponseModel?
+        let userVote: Bool?
+        let userFavorite: Bool?
+        let userObserve: Bool?
+        let userLists: [String]?
+        let isRecommended: Bool?
         
-        struct PromotedListAuthorResponseModel: Decodable {
-            enum CodingKeys: String, CodingKey {
-                case login = "login"
-                case color = "color"
-                case sex = "sex"
-                case avatar = "avatar"
-            }
-            
-            let login: String?
-            let color: Int?
-            let sex: String?
-            let avatar: URL?
-        }
+        struct PromotedListCommentsResponseModel: Decodable { }
     }
 }

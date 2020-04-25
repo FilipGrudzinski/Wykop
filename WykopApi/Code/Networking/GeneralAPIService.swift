@@ -11,6 +11,7 @@ import Moya
 
 enum GeneralAPIService {
     case promotedList(Int)
+    case streamList(Int)
 }
 
 extension GeneralAPIService: TargetType {
@@ -19,13 +20,16 @@ extension GeneralAPIService: TargetType {
     var path: String {
         switch self {
         case let .promotedList(request):
-            return "Links/Promoted/page/\(request)/\(GeneralAPIService.appKey))"
+            return "Links/Promoted/page/\(request)/\(GeneralAPIService.appKey)"
+            
+        case let .streamList(request):
+            return "Entries/Stream/page/\(request)/\(GeneralAPIService.appKey)"
         }
     }
         
     var task: Task {
         switch self {
-        case .promotedList:
+        case .promotedList, .streamList:
             return .requestPlain
         }
     }
