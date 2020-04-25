@@ -15,7 +15,7 @@ class MainNavigationController: UINavigationController {
         let backButton = UIBarButtonItem(title: .empty, style: .plain, target: nil, action: nil)
         topViewController?.navigationItem.backBarButtonItem = backButton
         navigationBar.barTintColor = .white
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        navigationBar.tintColor = .black
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appBlue]
+        navigationBar.tintColor = .appBlue
     }
 }

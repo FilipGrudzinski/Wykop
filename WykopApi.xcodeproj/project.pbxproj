@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		14A1D41C03BC8E374881268D /* Pods_WykopApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54245C38531F967025F212E /* Pods_WykopApi.framework */; };
+		DC6BA6952454DD1500F23DFA /* ApiResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6942454DD1500F23DFA /* ApiResponseError.swift */; };
+		DC6BA6972454E70500F23DFA /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6962454E70500F23DFA /* AlertHelper.swift */; };
+		DC6BA69A2454E84200F23DFA /* CommonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6992454E84200F23DFA /* CommonAlertController.swift */; };
+		DC6BA69C2454E84A00F23DFA /* CommonAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC6BA69B2454E84A00F23DFA /* CommonAlertController.xib */; };
+		DC6BA69E2454E85600F23DFA /* CommonAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA69D2454E85600F23DFA /* CommonAlertModel.swift */; };
 		DCA66576245215B3006151AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66575245215B3006151AE /* AppDelegate.swift */; };
 		DCA6657F245215B4006151AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA6657E245215B4006151AE /* Assets.xcassets */; };
 		DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA66580245215B4006151AE /* LaunchScreen.storyboard */; };
@@ -31,7 +36,7 @@
 		DCA665BA24521EE7006151AE /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665B824521EE7006151AE /* CommonTableViewCell.swift */; };
 		DCA665BB24521EE7006151AE /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA665B924521EE7006151AE /* CommonTableViewCell.xib */; };
 		DCA665BD24522877006151AE /* MoyaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BC24522877006151AE /* MoyaExtensions.swift */; };
-		DCA665C0245228D3006151AE /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BF245228D3006151AE /* ApiError.swift */; };
+		DCA665C0245228D3006151AE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665BF245228D3006151AE /* APIError.swift */; };
 		DCA665C224522948006151AE /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C124522948006151AE /* BaseTargetType.swift */; };
 		DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C3245229D7006151AE /* GeneralAPIService.swift */; };
 		DCA665C624523278006151AE /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA665C524523278006151AE /* APIWorker.swift */; };
@@ -49,6 +54,11 @@
 
 /* Begin PBXFileReference section */
 		24D3A5626A905AD7FBC42885 /* Pods-WykopApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.release.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.release.xcconfig"; sourceTree = "<group>"; };
+		DC6BA6942454DD1500F23DFA /* ApiResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseError.swift; sourceTree = "<group>"; };
+		DC6BA6962454E70500F23DFA /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		DC6BA6992454E84200F23DFA /* CommonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertController.swift; sourceTree = "<group>"; };
+		DC6BA69B2454E84A00F23DFA /* CommonAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonAlertController.xib; sourceTree = "<group>"; };
+		DC6BA69D2454E85600F23DFA /* CommonAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertModel.swift; sourceTree = "<group>"; };
 		DCA66572245215B3006151AE /* WykopApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WykopApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA66575245215B3006151AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA6657E245215B4006151AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +84,7 @@
 		DCA665B824521EE7006151AE /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
 		DCA665B924521EE7006151AE /* CommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
 		DCA665BC24522877006151AE /* MoyaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaExtensions.swift; sourceTree = "<group>"; };
-		DCA665BF245228D3006151AE /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		DCA665BF245228D3006151AE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		DCA665C124522948006151AE /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		DCA665C3245229D7006151AE /* GeneralAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPIService.swift; sourceTree = "<group>"; };
 		DCA665C524523278006151AE /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
@@ -119,6 +129,16 @@
 				24D3A5626A905AD7FBC42885 /* Pods-WykopApi.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC6BA6982454E81C00F23DFA /* CommonAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				DC6BA6992454E84200F23DFA /* CommonAlertController.swift */,
+				DC6BA69B2454E84A00F23DFA /* CommonAlertController.xib */,
+				DC6BA69D2454E85600F23DFA /* CommonAlertModel.swift */,
+			);
+			path = CommonAlertController;
 			sourceTree = "<group>";
 		};
 		DCA66569245215B3006151AE = {
@@ -187,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				DCEC1B9724548F6000C1C5AC /* MagicNumbersHelper.swift */,
+				DC6BA6962454E70500F23DFA /* AlertHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,6 +231,7 @@
 		DCA6658E245216D5006151AE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DC6BA6982454E81C00F23DFA /* CommonAlertController */,
 				DCA665AC245219B6006151AE /* ActivityIndicator.swift */,
 			);
 			path = Components;
@@ -286,7 +308,8 @@
 		DCA665BE245228C0006151AE /* ApiError */ = {
 			isa = PBXGroup;
 			children = (
-				DCA665BF245228D3006151AE /* ApiError.swift */,
+				DCA665BF245228D3006151AE /* APIError.swift */,
+				DC6BA6942454DD1500F23DFA /* ApiResponseError.swift */,
 			);
 			path = ApiError;
 			sourceTree = "<group>";
@@ -383,6 +406,7 @@
 				DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */,
 				DCA665BB24521EE7006151AE /* CommonTableViewCell.xib in Resources */,
 				DCEC1B9324547AA100C1C5AC /* DetailsViewController.xib in Resources */,
+				DC6BA69C2454E84A00F23DFA /* CommonAlertController.xib in Resources */,
 				DCA665B124521A4C006151AE /* MainViewController.xib in Resources */,
 				DCA6657F245215B4006151AE /* Assets.xcassets in Resources */,
 			);
@@ -444,11 +468,13 @@
 				DCA665A9245218DB006151AE /* UITableViewExtension.swift in Sources */,
 				DCEC1B82245471C100C1C5AC /* StreamListResponseModel.swift in Sources */,
 				DCEC1B9B2454915B00C1C5AC /* TableViewCellItemModel.swift in Sources */,
+				DC6BA69A2454E84200F23DFA /* CommonAlertController.swift in Sources */,
 				DCA665B524521A94006151AE /* Localized.swift in Sources */,
 				DCEC1B9424547AA100C1C5AC /* DetailsViewModel.swift in Sources */,
 				DCA665AD245219B6006151AE /* ActivityIndicator.swift in Sources */,
 				DCA665B224521A4C006151AE /* MainViewModel.swift in Sources */,
 				DCEC1B842454772100C1C5AC /* CommonPaginationResponseModel.swift in Sources */,
+				DC6BA6972454E70500F23DFA /* AlertHelper.swift in Sources */,
 				DCA665C4245229D7006151AE /* GeneralAPIService.swift in Sources */,
 				DCEC1B9224547AA100C1C5AC /* DetailsViewController.swift in Sources */,
 				DCA6659624521854006151AE /* CommonViewController.swift in Sources */,
@@ -459,16 +485,18 @@
 				DCA6659424521841006151AE /* MainNavigationController.swift in Sources */,
 				DCA66576245215B3006151AE /* AppDelegate.swift in Sources */,
 				DCA665BA24521EE7006151AE /* CommonTableViewCell.swift in Sources */,
-				DCA665C0245228D3006151AE /* ApiError.swift in Sources */,
+				DCA665C0245228D3006151AE /* APIError.swift in Sources */,
 				DCA665A6245218DB006151AE /* UIColorExtension.swift in Sources */,
 				DCEC1B9824548F6000C1C5AC /* MagicNumbersHelper.swift in Sources */,
 				DCA6659A24521886006151AE /* MainCoordinator.swift in Sources */,
 				DCEC1B862454774000C1C5AC /* CommonAuthorResponseModel.swift in Sources */,
 				DCA665AA245218DB006151AE /* UIViewExtensionsNib.swift in Sources */,
+				DC6BA6952454DD1500F23DFA /* ApiResponseError.swift in Sources */,
 				DCA665C224522948006151AE /* BaseTargetType.swift in Sources */,
 				DCA665982452186C006151AE /* ApplicationCoordinator.swift in Sources */,
 				DCA665A5245218DB006151AE /* BundleExtension.swift in Sources */,
 				DCA665A8245218DB006151AE /* UIFontExtension.swift in Sources */,
+				DC6BA69E2454E85600F23DFA /* CommonAlertModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

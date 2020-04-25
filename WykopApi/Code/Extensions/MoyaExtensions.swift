@@ -17,13 +17,21 @@ extension MoyaProvider where Target: TargetType {
                 switch result {
                 case let .success(response):
                     do {
-                        let model: U = try JSONDecoder().decode(U.self, from: response.data)
-                        resolver.fulfill(model)
+                        do {
+                            let errorResponse: ApiResponseError = try JSONDecoder().decode(ApiResponseError.self, from: response.data)
+                            resolver.reject(errorResponse)
+                        } catch {
+                            let model: U = try JSONDecoder().decode(U.self, from: response.data)
+                            resolver.fulfill(model)
+                        }
                     } catch {
                         print(error)
-                        #warning("Add erroHandler")
-                        let apiError: APIError = MoyaProvider.errorHandler(response.statusCode)
-                        resolver.reject(apiError)
+                        do {
+                            let errorResponse: ApiResponseError = try JSONDecoder().decode(ApiResponseError.self, from: response.data)
+                            resolver.reject(errorResponse)
+                        } catch {
+                            resolver.reject(error)
+                        }
                     }
                 case let .failure(error):
                     resolver.reject(error)
@@ -34,7 +42,7 @@ extension MoyaProvider where Target: TargetType {
 }
 
 extension MoyaProvider {
-    static func errorHandler(_ value: Int) -> APIError {
+    static func errorResponse(_ value: Int) -> APIError {
         guard value == APIError.invalidAPIKey.rawValue else {
             return APIError.invalidAPIKey
         }

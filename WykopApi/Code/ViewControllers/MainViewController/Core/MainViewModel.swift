@@ -125,7 +125,17 @@ final class MainViewModel {
     }
     
     private func errorHandler(_ error: Error) {
+        delegate.activityIndicatorState(false)
+        guard let networkError = error as? ApiResponseError else {
+            fatalError()
+            return
+        }
         
+        switch networkError.error.code {
+        case .invalidAPIKey:
+            print(networkError.error.messagePl)
+        default: ()
+        }
     }
 }
 
