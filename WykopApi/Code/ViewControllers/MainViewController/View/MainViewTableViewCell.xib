@@ -9,16 +9,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="136" id="3en-fa-ADR" customClass="MainViewTableViewCell" customModule="WykopApi" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="62" id="3en-fa-ADR" customClass="MainViewTableViewCell" customModule="WykopApi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3en-fa-ADR" id="5vI-Il-cGn">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQs-Ud-h5L">
-                        <rect key="frame" x="6" y="6" width="402" height="124"/>
+                        <rect key="frame" x="6" y="6" width="402" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDu-SB-VAO">
+                                <rect key="frame" x="10" y="0.0" width="382" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hDu-SB-VAO" firstAttribute="leading" secondItem="kQs-Ud-h5L" secondAttribute="leading" constant="10" id="2s2-rD-NG4"/>
+                            <constraint firstItem="hDu-SB-VAO" firstAttribute="top" secondItem="kQs-Ud-h5L" secondAttribute="top" id="aAG-Hp-PVw"/>
+                            <constraint firstAttribute="bottom" secondItem="hDu-SB-VAO" secondAttribute="bottom" id="auc-FH-uFE"/>
+                            <constraint firstAttribute="trailing" secondItem="hDu-SB-VAO" secondAttribute="trailing" constant="10" id="tUs-7Z-WGx"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -30,8 +44,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="shadowView" destination="kQs-Ud-h5L" id="m8v-wR-xDs"/>
+                <outlet property="titleLabel" destination="hDu-SB-VAO" id="uOj-ca-iIz"/>
             </connections>
-            <point key="canvasLocation" x="762.31884057971024" y="195.53571428571428"/>
+            <point key="canvasLocation" x="762.31884057971024" y="170.75892857142856"/>
         </tableViewCell>
     </objects>
 </document>

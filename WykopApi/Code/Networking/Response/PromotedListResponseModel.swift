@@ -42,10 +42,11 @@ struct PromotedListResponseModel: Decodable {
             case userObserve = "user_observe"
             case userLists = "user_lists"
             case isRecommended = "is_recommended"
+            case url = "url"
         }
         
-        let id: Int?
-        let title: String?
+        let id: Int
+        let title: String
         let description: String?
         let tags: String?
         let sourceUrl: String?
@@ -67,6 +68,7 @@ struct PromotedListResponseModel: Decodable {
         let userObserve: Bool?
         let userLists: [String]?
         let isRecommended: Bool?
+        let url: String
         
         struct PromotedListCommentsResponseModel: Decodable { }
     }

@@ -9,7 +9,6 @@
 import Moya
 import Alamofire
 import PromiseKit
-import SwiftyJSON
 
 protocol APIWorkerProtocol {
     func fetchPromotedList(_ pageNumber: Int) -> Promise<PromotedListResponseModel>

@@ -17,6 +17,7 @@ final class MainViewTableViewCell: UITableViewCell {
     }
     
     @IBOutlet private weak var shadowView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,7 @@ final class MainViewTableViewCell: UITableViewCell {
     }
     
     private func setupCell() {
+        titleLabel.numberOfLines = .zero
         setupShadow()
     }
     
@@ -36,6 +38,7 @@ final class MainViewTableViewCell: UITableViewCell {
         shadowView.layer.shadowOffset = Constants.shadowOffset
     }
     
-    func setupData() {
+    func setupData(_ title: String) {
+        titleLabel.text = title.removeDoubleQuotes()
     }
 }

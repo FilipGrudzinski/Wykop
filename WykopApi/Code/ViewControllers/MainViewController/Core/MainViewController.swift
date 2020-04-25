@@ -9,6 +9,10 @@
 import UIKit
 
 final class MainViewController: CommonViewController {
+    private enum Constants {
+        static let cellHeight: CGFloat = 60.0
+    }
+    
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var segmentControl: UISegmentedControl!
     
@@ -50,6 +54,7 @@ final class MainViewController: CommonViewController {
         tableView.allowsSelectionDuringEditing = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
+        tableView.rowHeight = Constants.cellHeight
     }
 }
 
@@ -58,15 +63,20 @@ extension MainViewController: UITableViewDelegate {
         viewModel.didTapCell(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        viewModel.loadMoreData(indexPath.row)
+    }
 }
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSourceCount
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MainViewTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
+        cell.setupData(viewModel.item(at: indexPath).title)
         return cell
     }
 }
