@@ -96,7 +96,7 @@ final class MainViewModel {
                 return
             }
             
-            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.preview?))
+            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.preview))
             }
             
             delegate.reloadData()
