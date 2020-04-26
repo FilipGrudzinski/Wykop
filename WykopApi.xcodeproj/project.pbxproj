@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14A1D41C03BC8E374881268D /* Pods_WykopApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54245C38531F967025F212E /* Pods_WykopApi.framework */; };
+		DC2B83B32455AA4E00715342 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B83B22455AA4E00715342 /* WebKit.framework */; };
 		DC6BA6952454DD1500F23DFA /* ApiResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6942454DD1500F23DFA /* ApiResponseError.swift */; };
 		DC6BA6972454E70500F23DFA /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6962454E70500F23DFA /* AlertHelper.swift */; };
 		DC6BA69A2454E84200F23DFA /* CommonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6992454E84200F23DFA /* CommonAlertController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		24D3A5626A905AD7FBC42885 /* Pods-WykopApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WykopApi.release.xcconfig"; path = "Target Support Files/Pods-WykopApi/Pods-WykopApi.release.xcconfig"; sourceTree = "<group>"; };
+		DC2B83B22455AA4E00715342 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DC6BA6942454DD1500F23DFA /* ApiResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseError.swift; sourceTree = "<group>"; };
 		DC6BA6962454E70500F23DFA /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DC6BA6992454E84200F23DFA /* CommonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2B83B32455AA4E00715342 /* WebKit.framework in Frameworks */,
 				14A1D41C03BC8E374881268D /* Pods_WykopApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +122,7 @@
 		7C904D64FCFCDF3430D6FABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC2B83B22455AA4E00715342 /* WebKit.framework */,
 				E54245C38531F967025F212E /* Pods_WykopApi.framework */,
 			);
 			name = Frameworks;
