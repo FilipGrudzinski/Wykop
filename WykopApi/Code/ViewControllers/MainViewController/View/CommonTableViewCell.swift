@@ -64,7 +64,7 @@ final class CommonTableViewCell: UITableViewCell {
             authorTitleLabel.isHidden = true
             authorValueLabel.isHidden = true
         case .blog:
-            titleLabel.numberOfLines = Digit.three
+            titleLabel.numberOfLines = Digit.four
             authorTitleLabel.text = Localized.commonCellAuthorLabelText
             authorValueLabel.font = .font(with: .regular, size: .medium)
             authorTitleLabel.textColor = .appBlue
