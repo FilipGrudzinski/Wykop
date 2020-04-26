@@ -20,14 +20,12 @@ PODS:
     - PromiseKit/CorePromise
   - Result (4.1.0)
   - RxSwift (4.5.0)
-  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
   - Kingfisher
   - Moya/RxSwift (= 13.0.1)
   - PromiseKit (= 6.10.0)
-  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -37,7 +35,6 @@ SPEC REPOS:
     - PromiseKit
     - Result
     - RxSwift
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -46,8 +43,7 @@ SPEC CHECKSUMS:
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: a694bea54a712a2199164f1f473ce8b62f86a475
+PODFILE CHECKSUM: 78fbaf4a8dcfdb2d2abf9747af0cd416d9029e6b
 
 COCOAPODS: 1.8.4

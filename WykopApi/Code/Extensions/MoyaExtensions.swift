@@ -7,7 +7,6 @@
 //
 
 import Moya
-import SwiftyJSON
 import PromiseKit
 
 extension MoyaProvider where Target: TargetType {
