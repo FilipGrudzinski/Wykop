@@ -9,42 +9,15 @@
 import Foundation
 
 struct PromotedListResponseModel: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case pagination = "pagination"
-        case data = "data"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case pagination = "pagination"
+//        case data = "data"
+//    }
     
     let pagination: CommonPaginationResponseModel
     let data: [PromotedListDataResponseModel]
     
     struct PromotedListDataResponseModel: Decodable {
-        enum CodingKeys: String, CodingKey {
-            case id = "id"
-            case title = "title"
-            case description = "description"
-            case tags = "tags"
-            case sourceUrl = "source_url"
-            case buryCount = "bury_count"
-            case voteCount = "vote_count"
-            case commentsCount = "comments_count"
-            case relatedCount = "related_count"
-            case date = "date"
-            case author = "author"
-            case preview = "preview"
-            case plus18 = "plus18"
-            case status = "status"
-            case canVote = "can_vote"
-            case isHot = "is_hot"
-            case app = "app"
-            case comments = "comments"
-            case userVote = "user_vote"
-            case userFavorite = "user_favorite"
-            case userObserve = "user_observe"
-            case userLists = "user_lists"
-            case isRecommended = "is_recommended"
-            case url = "url"
-        }
-        
         let id: Int
         let title: String
         let description: String?

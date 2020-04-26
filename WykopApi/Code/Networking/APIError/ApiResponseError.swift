@@ -9,20 +9,9 @@
 import Foundation
 
 struct ApiResponseError: Decodable, Error {
-    enum CodingKeys: String, CodingKey {
-        case error = "error"
-    }
-    
     let error: ErrorResponseModel
     
     struct ErrorResponseModel: Decodable, Error {
-        
-        enum CodingKeys: String, CodingKey {
-            case code = "code"
-            case field = "field"
-            case messageEn = "message_en"
-            case messagePl = "message_pl"
-        }
         
         let code: APIError
         let field: String?

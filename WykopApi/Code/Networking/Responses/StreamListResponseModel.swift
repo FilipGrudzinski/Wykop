@@ -9,37 +9,10 @@
 import Foundation
 
 struct StreamListResponseModel: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case pagination = "pagination"
-        case data = "data"
-    }
-    
     let pagination: CommonPaginationResponseModel
     let data: [StreamListCompactResponseModel]
     
     struct StreamListCompactResponseModel: Decodable {
-        enum CodingKeys: String, CodingKey {
-            case id = "id"
-            case date = "date"
-            case body = "body"
-            case author = "author"
-            case receiver = "receiver"
-            case blocked = "blocked"
-            case favorite = "favorite"
-            case voteCount = "vote_count"
-            case commentsCount = "comments_count"
-            case comment = "comment"
-            case status = "status"
-            case embed = "embed"
-            case survey = "survey"
-            case canComment = "can_comment"
-            case userVote = "user_vote"
-            case app = "app"
-            case violationUrl = "violation_url"
-            case original = "original"
-            case url = "url"
-        }
-        
         let id: Int
         let date: String?
         var body: String?

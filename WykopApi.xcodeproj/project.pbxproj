@@ -12,7 +12,8 @@
 		DC6BA6972454E70500F23DFA /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6962454E70500F23DFA /* AlertHelper.swift */; };
 		DC6BA69A2454E84200F23DFA /* CommonAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA6992454E84200F23DFA /* CommonAlertController.swift */; };
 		DC6BA69C2454E84A00F23DFA /* CommonAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC6BA69B2454E84A00F23DFA /* CommonAlertController.xib */; };
-		DC6BA69E2454E85600F23DFA /* CommonAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA69D2454E85600F23DFA /* CommonAlertModel.swift */; };
+		DC6BA69E2454E85600F23DFA /* CommonAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BA69D2454E85600F23DFA /* CommonAlertViewModel.swift */; };
+		DC82D1B32455972700040A1E /* LayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC82D1B22455972700040A1E /* LayerExtension.swift */; };
 		DCA66576245215B3006151AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66575245215B3006151AE /* AppDelegate.swift */; };
 		DCA6657F245215B4006151AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA6657E245215B4006151AE /* Assets.xcassets */; };
 		DCA66582245215B4006151AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA66580245215B4006151AE /* LaunchScreen.storyboard */; };
@@ -58,7 +59,8 @@
 		DC6BA6962454E70500F23DFA /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DC6BA6992454E84200F23DFA /* CommonAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertController.swift; sourceTree = "<group>"; };
 		DC6BA69B2454E84A00F23DFA /* CommonAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonAlertController.xib; sourceTree = "<group>"; };
-		DC6BA69D2454E85600F23DFA /* CommonAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertModel.swift; sourceTree = "<group>"; };
+		DC6BA69D2454E85600F23DFA /* CommonAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertViewModel.swift; sourceTree = "<group>"; };
+		DC82D1B22455972700040A1E /* LayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerExtension.swift; sourceTree = "<group>"; };
 		DCA66572245215B3006151AE /* WykopApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WykopApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA66575245215B3006151AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA6657E245215B4006151AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,7 +138,7 @@
 			children = (
 				DC6BA6992454E84200F23DFA /* CommonAlertController.swift */,
 				DC6BA69B2454E84A00F23DFA /* CommonAlertController.xib */,
-				DC6BA69D2454E85600F23DFA /* CommonAlertModel.swift */,
+				DC6BA69D2454E85600F23DFA /* CommonAlertViewModel.swift */,
 			);
 			path = CommonAlertController;
 			sourceTree = "<group>";
@@ -206,8 +208,8 @@
 		DCA6658C245216C1006151AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DCEC1B9724548F6000C1C5AC /* MagicNumbersHelper.swift */,
 				DC6BA6962454E70500F23DFA /* AlertHelper.swift */,
+				DCEC1B9724548F6000C1C5AC /* MagicNumbersHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -224,6 +226,7 @@
 				DCA665A2245218DB006151AE /* UITableViewExtension.swift */,
 				DCA665A3245218DB006151AE /* UIViewExtensionsNib.swift */,
 				DCA665BC24522877006151AE /* MoyaExtensions.swift */,
+				DC82D1B22455972700040A1E /* LayerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,10 +260,10 @@
 		DCA66591245216FD006151AE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DCBAE0B12453863800ED66FE /* Response */,
 				DCA665C124522948006151AE /* BaseTargetType.swift */,
 				DCA665C3245229D7006151AE /* GeneralAPIService.swift */,
-				DCA665BE245228C0006151AE /* ApiError */,
+				DCA665BE245228C0006151AE /* APIError */,
+				DCBAE0B12453863800ED66FE /* Responses */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -305,16 +308,16 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		DCA665BE245228C0006151AE /* ApiError */ = {
+		DCA665BE245228C0006151AE /* APIError */ = {
 			isa = PBXGroup;
 			children = (
 				DCA665BF245228D3006151AE /* APIError.swift */,
 				DC6BA6942454DD1500F23DFA /* ApiResponseError.swift */,
 			);
-			path = ApiError;
+			path = APIError;
 			sourceTree = "<group>";
 		};
-		DCBAE0B12453863800ED66FE /* Response */ = {
+		DCBAE0B12453863800ED66FE /* Responses */ = {
 			isa = PBXGroup;
 			children = (
 				DCBAE0B22453865700ED66FE /* PromotedListResponseModel.swift */,
@@ -322,7 +325,7 @@
 				DCEC1B832454772100C1C5AC /* CommonPaginationResponseModel.swift */,
 				DCEC1B852454774000C1C5AC /* CommonAuthorResponseModel.swift */,
 			);
-			path = Response;
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		DCEC1B8E24547A5600C1C5AC /* DetailsViewController */ = {
@@ -496,7 +499,8 @@
 				DCA665982452186C006151AE /* ApplicationCoordinator.swift in Sources */,
 				DCA665A5245218DB006151AE /* BundleExtension.swift in Sources */,
 				DCA665A8245218DB006151AE /* UIFontExtension.swift in Sources */,
-				DC6BA69E2454E85600F23DFA /* CommonAlertModel.swift in Sources */,
+				DC6BA69E2454E85600F23DFA /* CommonAlertViewModel.swift in Sources */,
+				DC82D1B32455972700040A1E /* LayerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

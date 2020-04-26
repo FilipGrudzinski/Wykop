@@ -10,20 +10,8 @@ import Foundation
 import Moya
 
 extension TargetType {
-    
-    var baseURL: URL {
-        return URL(string: "https://a2.wykop.pl/")!
-    }
-    
-    var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
-    }
-    
-    var method: Moya.Method {
-        return .get
-    }
-    
-    var sampleData: Data {
-        return Data()
-    }
+    var baseURL: URL { URL(string: "https://a2.wykop.pl/")! }
+    var headers: [String : String]? { ["Content-Type": "application/json"] }
+    var method: Moya.Method { .get }
+    var sampleData: Data { Data() }
 }

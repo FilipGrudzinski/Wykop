@@ -11,7 +11,7 @@ import UIKit
 enum AlertHelper {
     static let alert =  AlertService()
     
-    case commonAlert(confirmHandler: ((Date) -> ())? = nil, cancelHandler: (() -> ())? = nil, dateHandler: ((Date) -> ())? = nil, controller: UIViewController)
+    case commonAlert(model: CommonAlertModel, confirmHandler: (() -> ())? = nil, controller: UIViewController)
     
     enum SubType {
         case commonAlert
@@ -19,8 +19,8 @@ enum AlertHelper {
     
     func show() {
         switch self {
-        case let .commonAlert(confirmHandler, cancelHandler, dateHandler, controller):
-            AlertHelper.alert.create(type: .commonAlert, confirmHandler: confirmHandler, cancelHandler: cancelHandler, dateHandler: dateHandler, controller)
+        case let .commonAlert(model, confirmHandler, controller):
+            AlertHelper.alert.create(type: .commonAlert, model: model, confirmHandler: confirmHandler, controller)
         }
     }
 }
@@ -28,17 +28,18 @@ enum AlertHelper {
 final class AlertService {
     
     @discardableResult
-    func create(type: AlertHelper.SubType, confirmHandler: ((Date) -> ())?, cancelHandler: (() -> ())?, dateHandler: ((Date) -> ())?, _ controller: UIViewController) -> CommonViewController {
+    func create(type: AlertHelper.SubType, model: CommonAlertModel, confirmHandler: (() -> ())?, _ controller: UIViewController) -> CommonViewController {
         switch type {
         case .commonAlert:
-            return create(confirmHandler: confirmHandler, cancelHandler: cancelHandler, dateHandler: dateHandler, controller)
+            return create(model: model, confirmHandler: confirmHandler, controller)
         }
     }
     
-    private func create(confirmHandler: ((Date) -> ())?, cancelHandler: (() -> ())?, dateHandler: ((Date) -> ())?, _ controller: UIViewController) -> CommonViewController {
-        let viewModel = CommonDatePickerViewModel(confirmHandler: confirmHandler, cancelHandler: cancelHandler, dateHandler: dateHandler)
-        let inViewController = CommonDatePickerViewController(with: viewModel)
-        controller.present(inViewController, animated: true)
-        return inViewController
+    private func create(model: CommonAlertModel ,confirmHandler: (() -> ())?, _ controller: UIViewController) -> CommonViewController {
+        let viewModel = CommonAlertViewModel(model: model, confirmHandler: confirmHandler)
+        let viewController = CommonAlertController(with: viewModel)
+        viewController.modalPresentationStyle = .custom
+        controller.present(viewController, animated: false)
+        return viewController
     }
 }

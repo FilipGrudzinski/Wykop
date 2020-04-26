@@ -47,7 +47,6 @@ extension DetailsViewModel: DetailsViewModelProtocol {
             return
         }
         
-
         urlUpdateHandler?(url)
     }
 }

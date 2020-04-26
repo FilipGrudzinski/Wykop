@@ -1,5 +1,5 @@
 //
-//  CommonAlertModel.swift
+//  CommonPaginationResponseModel.swift
 //  WykopApi
 //
 //  Created by Filip Grudziński on 25/04/2020.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct CommonPaginationResponseModel: Decodable {
+    let next: URL?
+}

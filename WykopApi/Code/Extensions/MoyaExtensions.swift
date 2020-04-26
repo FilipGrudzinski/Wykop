@@ -18,16 +18,16 @@ extension MoyaProvider where Target: TargetType {
                 case let .success(response):
                     do {
                         do {
-                            let errorResponse: ApiResponseError = try JSONDecoder().decode(ApiResponseError.self, from: response.data)
+                            let errorResponse: ApiResponseError = try response.decode()
                             resolver.reject(errorResponse)
                         } catch {
-                            let model: U = try JSONDecoder().decode(U.self, from: response.data)
+                            let model: U = try response.decode()
                             resolver.fulfill(model)
                         }
                     } catch {
                         print(error)
                         do {
-                            let errorResponse: ApiResponseError = try JSONDecoder().decode(ApiResponseError.self, from: response.data)
+                            let errorResponse: ApiResponseError = try response.decode()
                             resolver.reject(errorResponse)
                         } catch {
                             resolver.reject(error)
@@ -41,11 +41,10 @@ extension MoyaProvider where Target: TargetType {
     }
 }
 
-extension MoyaProvider {
-    static func errorResponse(_ value: Int) -> APIError {
-        guard value == APIError.invalidAPIKey.rawValue else {
-            return APIError.invalidAPIKey
-        }
-        return APIError.invalidAPIKey
+extension Moya.Response {
+    func decode<T: Decodable>() throws -> T {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return try decoder.decode(T.self, from: data)
     }
 }

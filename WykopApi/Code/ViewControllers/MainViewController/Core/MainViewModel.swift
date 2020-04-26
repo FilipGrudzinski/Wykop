@@ -18,6 +18,7 @@ protocol MainViewModelProtocol: class {
     func didTapSegment(_ index: Int)
     func item(at indexPath: IndexPath) -> TableViewCellItemModel
     func didTapCell(at indexPath: IndexPath)
+    func refreshData()
 }
 
 protocol MainViewModelDelegate: class {
@@ -25,6 +26,7 @@ protocol MainViewModelDelegate: class {
     func setSegment(_ index: Int)
     func reloadData()
     func setSegmentControlData(data: [String])
+    func presentAlert(_ model: CommonAlertModel)
 }
 
 final class MainViewModel {
@@ -94,7 +96,7 @@ final class MainViewModel {
                 return
             }
             
-            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title.removeDoubleQuotes(), url: $0.url, imageUrl: $0.author?.avatar))
+            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.author?.avatar))
             }
             
             delegate.reloadData()
@@ -128,13 +130,15 @@ final class MainViewModel {
         delegate.activityIndicatorState(false)
         guard let networkError = error as? ApiResponseError else {
             fatalError()
-            return
         }
         
         switch networkError.error.code {
         case .invalidAPIKey:
-            print(networkError.error.messagePl)
-        default: ()
+            let model = CommonAlertModel(title: Localized.commonAlertTitle, description: networkError.error.messagePl ?? Localized.commonAlertDescription, buttonTitle: Localized.commonAlertButtonTitle)
+            delegate.presentAlert(model)
+        default:
+            let model = CommonAlertModel(title: Localized.commonAlertTitle, description: Localized.commonAlertDescription, buttonTitle: Localized.commonAlertButtonTitle)
+            delegate.presentAlert(model)
         }
     }
 }
@@ -166,6 +170,7 @@ extension MainViewModel: MainViewModelProtocol {
     
     func didTapSegment(_ index: Int) {
         itemsDataSource.removeAll()
+        delegate.reloadData()
         
         switch SegmentType.allCases[index] {
         case .main:
@@ -186,5 +191,18 @@ extension MainViewModel: MainViewModelProtocol {
     func didTapCell(at indexPath: IndexPath) {
         let itemUrl = itemsDataSource[indexPath.row].url
         coordinator.showDetailsView(itemUrl)
+    }
+    
+    func refreshData() {
+        resetPageParams()
+        
+        switch currentSegment {
+        case .main:
+            resetPageParams()
+            fetchPromotedData(Digit.one)
+        case .blog:
+            resetPageParams()
+            fetchStreamList(Digit.one)
+        }
     }
 }

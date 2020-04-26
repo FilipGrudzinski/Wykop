@@ -49,7 +49,7 @@ final class CommonTableViewCell: UITableViewCell {
     }
     
     func setupData(_ model: TableViewCellItemModel) {
-        titleLabel.text = model.title
+        titleLabel.text = model.title.removeDoubleQuotes()
         authorValueLabel.text = model.author
         avatarImage.kf.setImage(with: model.imageUrl)
         

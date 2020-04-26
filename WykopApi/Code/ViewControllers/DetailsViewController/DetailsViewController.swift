@@ -54,7 +54,7 @@ final class DetailsViewController: CommonViewController {
         
         activityViewController.popoverPresentationController?.sourceView = view
 
-        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.mail]
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.openInIBooks, UIActivity.ActivityType.postToFlickr]
 
         present(activityViewController, animated: true)
     }

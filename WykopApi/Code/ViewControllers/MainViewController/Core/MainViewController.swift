@@ -82,6 +82,10 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: MainViewModelDelegate {
+    func presentAlert(_ model: CommonAlertModel) {
+        AlertHelper.commonAlert(model: model, confirmHandler: viewModel.refreshData, controller: self).show()
+    }
+    
     func activityIndicatorState(_ state: Bool) {
         state ? activityIndicator.show() : activityIndicator.hide()
     }
