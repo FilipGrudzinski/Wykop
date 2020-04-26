@@ -1,5 +1,5 @@
 //
-//  MainTableViewCellItemModel.swift
+//  TableViewCellItemModel.swift
 //  WykopApi
 //
 //  Created by Filip Grudziński on 25/04/2020.

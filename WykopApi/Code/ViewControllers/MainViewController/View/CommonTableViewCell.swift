@@ -60,7 +60,6 @@ final class CommonTableViewCell: UITableViewCell {
         switch style {
         case .main:
             titleLabel.numberOfLines = .zero
-            avatarImage.isHidden = true
             authorTitleLabel.isHidden = true
             authorValueLabel.isHidden = true
         case .blog:
@@ -68,7 +67,6 @@ final class CommonTableViewCell: UITableViewCell {
             authorTitleLabel.text = Localized.commonCellAuthorLabelText
             authorValueLabel.font = .font(with: .regular, size: .medium)
             authorTitleLabel.textColor = .appBlue
-            avatarImage.isHidden = false
             authorTitleLabel.isHidden = false
             authorValueLabel.isHidden = false
         }

@@ -35,7 +35,18 @@ struct StreamListResponseModel: Decodable {
         
         struct StreamListCompactReceiverResponseModel: Decodable { }
         struct StreamListCommentsResponseModel: Decodable { }
-        struct StreamListEmbedResponseModel: Decodable { }
+        
+        struct StreamListEmbedResponseModel: Decodable {
+            let type: String?
+            let url: URL?
+            let source: String?
+            let preview: URL?
+            let plus18: Bool?
+            let size: String?
+            let animated: Bool?
+            let ratio: Float?
+        }
+        
         struct StreamListSurveyResponseModel: Decodable { }
     }
 }

@@ -24,7 +24,7 @@ struct PromotedListResponseModel: Decodable {
         let relatedCount: Int?
         let date: String?
         let author: CommonAuthorResponseModel?
-        let preview: String?
+        let preview: URL?
         let plus18: Bool?
         let status: String?
         let canVote: Bool?

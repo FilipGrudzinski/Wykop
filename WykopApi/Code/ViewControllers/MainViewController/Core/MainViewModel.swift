@@ -96,7 +96,7 @@ final class MainViewModel {
                 return
             }
             
-            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.author?.avatar))
+            promotedApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.title, url: $0.url, imageUrl: $0.preview?))
             }
             
             delegate.reloadData()
@@ -105,7 +105,7 @@ final class MainViewModel {
                 return
             }
             
-            streamApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.body?.removeHtmlTags() ?? .empty, url: $0.url, author: $0.author?.login, imageUrl: $0.author?.avatar))
+            streamApiDataSource.forEach { itemsDataSource.append(TableViewCellItemModel(style: type.cellStyle, title: $0.body?.removeHtmlTags() ?? .empty, url: $0.url, author: $0.author?.login, imageUrl: $0.embed?.preview))
             }
             
             delegate.reloadData()
