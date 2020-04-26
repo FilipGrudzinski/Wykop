@@ -9,11 +9,6 @@
 import Foundation
 
 struct PromotedListResponseModel: Decodable {
-//    enum CodingKeys: String, CodingKey {
-//        case pagination = "pagination"
-//        case data = "data"
-//    }
-    
     let pagination: CommonPaginationResponseModel
     let data: [PromotedListDataResponseModel]
     
